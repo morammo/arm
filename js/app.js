@@ -26,7 +26,7 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     function updateValue() {
-        var valueElement = document.querySelector(".flags__online span");
+        var valueElement = document.querySelector(".header__online div span");
         var randomSeconds = getRandomNumber(1, 5);
         var randomChange = getRandomNumber(-1093, 1093);
         var currentValue = parseInt(valueElement.textContent.replace(/\s+/g, ""), 10);
@@ -35,6 +35,17 @@
         setTimeout(updateValue, randomSeconds * 1e3);
     }
     updateValue();
+    let menuButton = document.querySelector(".main-menu__button");
+    let menu = document.querySelector(".main-menu__list");
+    let script_close = document.querySelector(".main-menu__close");
+    menuButton.addEventListener("click", (function(e) {
+        e.preventDefault();
+        menu.classList.add("active");
+    }));
+    script_close.addEventListener("click", (function(e) {
+        e.preventDefault();
+        menu.classList.remove("active");
+    }));
     window["FLS"] = true;
     isWebp();
 })();

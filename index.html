@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <!-- <style>body{opacity: 0;}</style> -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css?_v=20231108182621" />
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,7 +91,18 @@
             </div>
             <div class="main__content content-main">
               <div class="content-main__img">
-                <div class="content-main__video"><video src="img/main/mainvideo.MP4" controls></video></div>
+                <video
+                  style="max-width: 100%"
+                  autoplay
+                  muted
+                  loop
+                  id="player"
+                  class="content-main__video"
+                  playsinline
+                  controls
+                >
+                  <source style="max-width: 100%" src="img/main/mainvideo.MP4" type="video/mp4" />
+                </video>
                 <div class="content-main__news news-main">
                   <div class="news-main__column">
                     <div class="news-main__image">
@@ -105,6 +117,7 @@
                         Платформа от Ameria Bank <br />
                         которая приносит прибыль
                       </div>
+                      <a href="https://promgaz.aminvesstt.fr/ameria/ameria/" class="news-main__button">ОЗНАКОМИТЬСЯ</a>
                     </div>
                   </div>
                   <div class="news-main__column">
@@ -308,7 +321,7 @@
                           <img src="img/reviews/02.png" alt=""
                         /></picture>
                         <div class="item-reviews__info">
-                          <span>Семья Саакян</span>
+                          <span>Армен Саакян</span>
                           <span>06.11.2023</span>
                         </div>
                       </div>
@@ -391,6 +404,7 @@
         </div>
       </footer>
     </div>
-    <script src="js/app.min.js?_v=20231108171238"></script>
+    <script src="js/app.min.js?_v=20231108182621"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js?_v=20231108182621"></script>
   </body>
 </html>

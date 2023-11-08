@@ -147,7 +147,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100000;
 }
 
 .header__container {
@@ -374,8 +374,10 @@ body {
   font-size: 1.25rem;
 }
 
-.content-main__video video {
+.content-main__video {
   max-width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .main {
@@ -489,9 +491,12 @@ body {
   background-color: #3a3a3a;
 }
 
-.news-main__image {
-  width: 245px;
-  height: 200px;
+@media (min-width: 535px) {
+  .news-main__image {
+    width: 245px;
+    height: 200px;
+    max-width: 100%;
+  }
 }
 
 .news-main__image img {
@@ -662,6 +667,12 @@ body {
   width: 25rem;
 }
 
+@media (min-width: 27.5em) {
+  .item-reviews__info {
+    width: 25rem;
+  }
+}
+
 @media (min-width: 29.875em) {
   .content-main__img img {
     width: 43.75rem;
@@ -690,9 +701,13 @@ body {
   .news__column {
     padding-top: 0.625rem;
   }
+
+  .item-reviews__info {
+    width: 18.75rem;
+  }
 }
 
-@media (max-width: 61.99875em) {
+@media (max-width: 1255px) {
   .content-main__img {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -792,12 +807,6 @@ body {
   }
 }
 
-@media (max-width: 27.5em) and (max-width: 20em) {
-  .item-reviews__info {
-    width: 18.125rem;
-  }
-}
-
 @media (min-width: 20em) and (max-width: 61.875em) {
   @supports (font-size: clamp(1rem, 0.8805970149rem + 0.5970149254vw, 1.25rem)) {
     .header__text {
@@ -838,22 +847,16 @@ body {
   }
 }
 
-@media (max-width: 27.5em) and (min-width: 31.25em) {
-  .item-reviews__info {
-    width: 25rem;
-  }
-}
-
-@media (max-width: 27.5em) and (min-width: 20em) and (max-width: 31.25em) {
-  @supports (width: clamp(18.125rem, 5.9027777778rem + 61.1111111111vw, 25rem)) {
+@media (min-width: 20em) and (max-width: 27.5em) {
+  @supports (width: clamp(18.75rem, 2.0833333333rem + 83.3333333333vw, 25rem)) {
     .item-reviews__info {
-      width: clamp(18.125rem, 5.9027777778rem + 61.1111111111vw, 25rem);
+      width: clamp(18.75rem, 2.0833333333rem + 83.3333333333vw, 25rem);
     }
   }
 
-  @supports not (width: clamp(18.125rem, 5.9027777778rem + 61.1111111111vw, 25rem)) {
+  @supports not (width: clamp(18.75rem, 2.0833333333rem + 83.3333333333vw, 25rem)) {
     .item-reviews__info {
-      width: calc(18.125rem + 6.875 * (100vw - 20rem) / 11.25);
+      width: calc(18.75rem + 6.25 * (100vw - 20rem) / 7.5);
     }
   }
 }

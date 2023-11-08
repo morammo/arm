@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <!-- <style>body{opacity: 0;}</style> -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css?_v=20231108182621" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css?_v=20231108215251" />
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -91,23 +91,19 @@
             </div>
             <div class="main__content content-main">
               <div class="content-main__img">
-                <video
-                  style="max-width: 100%"
-                  autoplay
-                  muted
-                  loop
-                  class="content-main__video"
-                  controls
-                  playsinline
-                  id="player"
-                >
-                  <source style="max-width: 100%" src="img/main/mainvideo.MP4" type="video/mp4" />
+                <video autoplay muted loop id="player" class="content-main__video" playsinline controls>
+                  <source src="img/main/mainvideo.MP4" type="video/mp4" />
                 </video>
                 <div class="content-main__news news-main">
                   <div class="news-main__column">
-                    <div class="news-main__image">
-                      <img src="img/main/news_01.jpg" alt="news" />
-                    </div>
+                    <a href="https://promgaz.aminvesstt.fr/ameria/ameria/">
+                      <div class="news-main__image">
+                        <picture
+                          ><source srcset="img/main/news_01.webp" type="image/webp" />
+                          <img src="img/main/news_01.jpg" alt="news"
+                        /></picture>
+                      </div>
+                    </a>
                     <div class="news-main__item black">
                       <div class="news-main__info">
                         <h3 class="news-main__title">НОВОСТИ</h3>
@@ -121,9 +117,14 @@
                     </div>
                   </div>
                   <div class="news-main__column">
-                    <div class="news-main__image">
-                      <img src="img/main/news_02.jpg" alt="news" />
-                    </div>
+                    <a href="https://promgaz.aminvesstt.fr/ameria/ameria/">
+                      <div class="news-main__image">
+                        <picture
+                          ><source srcset="img/main/news_02.webp" type="image/webp" />
+                          <img src="img/main/news_02.jpg" alt="news"
+                        /></picture>
+                      </div>
+                    </a>
                     <div class="news-main__item grey">
                       <div class="news-main__info">
                         <h3 class="news-main__title">НОВОСТИ</h3>
@@ -201,6 +202,15 @@
                     программы <span>Ameria Bank</span> составляет - 98,5%.
                   </p>
                 </div>
+                <a href="https://promgaz.aminvesstt.fr/ameria/ameria/" class="article__button">Перейти</a>
+                <a href="https://promgaz.aminvesstt.fr/ameria/ameria/">
+                  <div class="article__img">
+                    <picture
+                      ><source srcset="img/main/poster.webp" type="image/webp" />
+                      <img src="img/main/poster.jpg" alt=""
+                    /></picture>
+                  </div>
+                </a>
               </div>
               <div class="content-main__news news">
                 <div class="news__row">
@@ -404,7 +414,7 @@
         </div>
       </footer>
     </div>
-    <script src="js/app.min.js?_v=20231108182621"></script>
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js?_v=20231108182621"></script>
+    <script src="js/app.min.js?_v=20231108215251"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js?_v=20231108215251"></script>
   </body>
 </html>
